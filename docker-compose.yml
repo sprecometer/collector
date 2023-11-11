@@ -1,0 +1,13 @@
+# For testing only
+
+# just displays the incoming requests on standard output
+services:
+  my-http-listener:
+    image: mendhak/http-https-echo:30
+    environment: 
+      - ECHO_BACK_TO_CLIENT=false
+      #- HTTP_PORT=8888
+      #- HTTPS_PORT=9999
+    ports:
+      - "8080:8080"
+      - "8443:8443"
